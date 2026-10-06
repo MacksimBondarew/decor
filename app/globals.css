@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-inter);
+    --font-serif: var(--font-dm-serif);
+}
+
+@theme {
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-extrabold: 800;
+    --text-display-10: clamp(2.5rem, 1.8333rem + 2.963vw, 4.5rem); /* 40 → 72px */
+    --text-display-10--line-height: 1.15;
+    --text-display-9: clamp(2.25rem, 1.75rem + 2.2222vw, 3.75rem); /* 36 → 60px */
+    --text-display-9--line-height: 1.15;
+    --text-display-8: clamp(2rem, 1.6667rem + 1.4815vw, 3rem); /* 32 → 48px */
+    --text-display-8--line-height: 1.25;
+    --text-display-7: clamp(1.75rem, 1.5833rem + 0.7407vw, 2.25rem); /* 28 → 36px */
+    --text-display-7--line-height: 1.25;
+    --text-display-6: clamp(1.5rem, 1.375rem + 0.5556vw, 1.875rem); /* 24 → 30px */
+    --text-display-6--line-height: 1.25;
+    --text-display-5: clamp(1.25rem, 1.1667rem + 0.3704vw, 1.5rem); /* 20 → 24px */
+    --text-display-5--line-height: 1.25;
+    --text-display-4: clamp(1.125rem, 1.0833rem + 0.1852vw, 1.25rem); /* 18 → 20px */
+    --text-display-4--line-height: 1.25;
+    --text-display-3: clamp(1rem, 0.9583rem + 0.1852vw, 1.125rem); /* 16 → 18px */
+    --text-display-3--line-height: 1.25;
+    --text-display-2: clamp(0.9375rem, 0.9167rem + 0.0926vw, 1rem); /* 15 → 16px */
+    --text-display-2--line-height: 1.25;
+    --text-display-1: 0.875rem; /* 14px — static */
+    --text-display-1--line-height: 1.25;
+    --text-paragraph-lg: clamp(1rem, 0.9583rem + 0.1852vw, 1.125rem); /* 16 → 18px */
+    --text-paragraph-lg--line-height: 1.5;
+    --text-paragraph: 1rem; /* 16px — static */
+    --text-paragraph--line-height: 1.5;
+    --text-paragraph-sm: 0.875rem; /* 14px — static */
+    --text-paragraph-sm--line-height: 1.5;
+}
+
+@theme {
+    /* Primary */
+    --color-primary-100: #2388ff;
+    --color-primary-200: #ff2d46;
+    --color-primary-300: #ffc700;
+    --color-primary-400: #63de77;
+
+    /* Secondary */
+    --color-secondary-100: #1777e7;
+    --color-secondary-200: #eaf4ff;
+    --color-secondary-300: #de1f35;
+    --color-secondary-400: #ffe8ea;
+    --color-secondary-500: #e79800;
+    --color-secondary-600: #fff9e5;
+    --color-secondary-700: #37c972;
+    --color-secondary-800: #e5f8e8;
+
+    /* Neutral */
+    --color-neutral-100: #ffffff;
+    --color-neutral-200: #f8faff;
+    --color-neutral-300: #f1f3f7;
+    --color-neutral-400: #e1e4ed;
+    --color-neutral-500: #b4b9c9;
+    --color-neutral-600: #6d758f;
+    --color-neutral-700: #353e5c;
+    --color-neutral-800: #19213d;
+
+    /* Overlay — Light */
+    --color-light-100: #ffffff66;
+    --color-light-200: #ffffff80;
+    --color-light-300: #ffffffa6;
+    --color-light-400: #ffffffcc;
+
+    /* Overlay — Dark */
+    --color-dark-100: #19213d66;
+    --color-dark-200: #19213d80;
+    --color-dark-300: #19213da6;
+    --color-dark-400: #19213dcc;
+
+    /* Gradients */
+    --gradient-red: linear-gradient(90deg, #df001b 0%, #ffdddf 100%);
+    --gradient-blue: linear-gradient(90deg, #0075ff 0%, #d0ebff 100%);
+    --gradient-yellow: linear-gradient(90deg, #ff9416 0%, #ffe03a 100%);
+    --gradient-green: linear-gradient(90deg, #3acd52 0%, #7dffa2 100%);
+}
+
+@utility bg-gradient-red {
+    background-image: var(--gradient-red);
+}
+@utility bg-gradient-blue {
+    background-image: var(--gradient-blue);
+}
+@utility bg-gradient-yellow {
+    background-image: var(--gradient-yellow);
+}
+@utility bg-gradient-green {
+    background-image: var(--gradient-green);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
 }
