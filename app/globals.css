@@ -90,6 +90,26 @@
     --gradient-green: linear-gradient(90deg, #3acd52 0%, #7dffa2 100%);
 }
 
+@theme {
+    /* Box shadows — Neutral */
+    --shadow-neutral-sm: 0px 1px 3px 0px #19213d1a;
+    --shadow-neutral-regular: 0px 2px 4px 0px #19213d14;
+    --shadow-neutral-md: 0px 8px 15px 0px #19213d1a;
+    --shadow-neutral-lg: 0px 8px 24px 0px #19213d1f;
+
+    /* Box shadows — Primary */
+    --shadow-primary-sm: 0px 0px 2px 0px #4d91e13b;
+    --shadow-primary-regular: 0px 4px 8px 0px #4d91e11a;
+    --shadow-primary-md: 0px 8px 15px 0px #4d91e11a;
+    --shadow-primary-lg: 0px 8px 24px 0px #4d91e11a;
+
+    /* Box shadows — Secondary */
+    --shadow-secondary-sm: 0px 0px 2px 0px #9b202f1a;
+    --shadow-secondary-regular: 0px 4px 8px 0px #9b202f1a;
+    --shadow-secondary-md: 0px 8px 15px 0px #9b202f1a;
+    --shadow-secondary-lg: 0px 8px 24px 0px #9b202f24;
+}
+
 @utility bg-gradient-red {
     background-image: var(--gradient-red);
 }
